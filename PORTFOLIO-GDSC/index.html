@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <title> Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/be1394c853.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="left"><u>Tarun's Portfolio</u></div>
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> <!-- Open Menu Icon -->
+            </nav>
+            <div class="header-text">
+                <p>Hi, I'm </p>
+                <h1><span id="dynamic-text">Tarun Kumar Prajapati</span></h1>
+                <h2>A<span id="dynamic-textt"> CS student</span></span></h2>
+            </div>
+
+            <div class="button-containerr"></div>
+            <a href="https://drive.google.com/file/d/1J28Ghk55Nyfz_f7G1PPCbsKfX-BQjm29/view?usp=drive_link" class="btnn"
+                download>Download CV</a>
+            <a href="mailto:tarunprajapati12442@gmail.com" class="btnn">Send Email</a>
+        </div>
+    </div>
+    <hr>
+    <!--------about---------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/ai.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">About Me </h1>
+                    <p>
+                        I am an Computer Science student from India, skilled in Microsoft Office, Web Development,
+                        Java, C Language. Currently pursuing my Bachelor's of Technology in Computer Science,
+                        I am continuously refining my skills to build innovative tech solutions.tions.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certfications')">Certfications</p>
+                    </div>
+                    <div class="tab-contents active-tab" id='skills'>
+                        <ul>
+                            <li><span>Microsoft Office</span><br>Created dynamic dashboards using Excel charts and
+                                graphs, enhancing data presentation and facilitating quicker decision-making for
+                                management teams.</li>
+
+                            <li><span>Web Development</span><br>Developed and implemented responsive websites using
+                                HTML an CSS improving user engagement and accessibility across
+                                devices.</li>
+                            <li><span>Java</span><br>Created GUI applications using Java Swing for user interaction.
+                            </li>
+                            <li><span>C Language</span><br>Implemented data structures like arrays and linked lists in
+                                C.</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id='experience'>
+                        <ul>
+                            <li><span>CISCO</span><br>Aprial 24 - May 24<br> Introduction To Cyber Security
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="tab-contents" id='education'>
+                        <ul>
+                            <li><span>Bachelor of Technology</span><br>Acropolis Institute of Technology and
+                                Research<br>September 2023 - July 2027</li>
+                            <li><span>Higher Secondary</span><br>CBSE Board<br>March 2021 - May 2022</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="tab-contents" id='certfications'>
+                        <ul>
+                            <li><span>Introduction of Cyber Security </span><br>EC-Council</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--------Contact---------->
+    <div id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/tarun-prajapati0912"><img src="images/linkedin.png"
+                            alt="LinkedIn" style="width: 24px; height: 24px;"></a>
+                    <a href="https://www.facebook.com/tarun.prajapati.091"><img src="images/facebook.png" alt="Facebook"
+                            style="width: 24px; height: 24px;"></a>
+                    <a href="https://www.instagram.com/__.tarun_ig/"><img src="images/instagram.png" alt="Instagram"
+                            style="width: 24px; height: 24px;"></a>
+                    <a href="https://x.com/TarunP09"><img src="images/X.png" alt="Twitter"
+                            style="width: 24px; height: 24px;"></a>
+                    <a href="https://github.com/taru091"><img src="images/github.png" alt="GitHub"
+                            style="width: 24px; height: 24px;"></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <footer class="footer">
+                    <p>&copy; Tarun Kumar Prajapati | All rights reserved.<span id="current-year"></span></p>
+                </footer>
+
+                <script>
+                    // JavaScript to dynamically insert the current year
+                    document.getElementById('current-year').textContent = new Date().getFullYear();
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------Scriptes----------------------------------------------->
+
+    <!-------------footer------------->
+
+    <script>
+        // JavaScript to dynamically insert the current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Function to check scroll position and show/hide footer
+        window.addEventListener('scroll', function () {
+            var footer = document.querySelector('.footer');
+            var scrollPosition = window.scrollY + window.innerHeight;
+            var documentHeight = document.documentElement.scrollHeight;
+
+            // Check if the user has scrolled to the bottom of the page
+            if (scrollPosition >= documentHeight) {
+                footer.style.display = 'block'; // Show footer when at the bottom
+            } else {
+                footer.style.display = 'none'; // Hide footer when not at the bottom
+            }
+        });
+    </script>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <!----------------h2---------------->
+    <script>
+        const roles = ["  App Developer", "  Web Developer"];
+        let currentRole = 0;
+        let dynamicRole = document.getElementById("dynamic-textt");
+
+        function typeWriter(text, i, callback) {
+            if (i < text.length) {
+                dynamicRole.innerHTML = text.substring(0, i + 1) + '<span class="caret">|</span>';
+                setTimeout(() => typeWriter(text, i + 1, callback), 100);
+            } else if (typeof callback == 'function') {
+                setTimeout(callback, 1000); // Pause before clearing
+            }
+        }
+
+        function clearText(callback) {
+            const text = dynamicRole.innerHTML;
+            const textWithoutCaret = text.replace('<span class="caret">|</span>', '');
+            if (textWithoutCaret.length > 0) {
+                dynamicRole.innerHTML = textWithoutCaret.substring(0, textWithoutCaret.length - 1) + '<span class="caret">|</span>';
+                setTimeout(() => clearText(callback), 50);
+            } else if (typeof callback == 'function') {
+                callback();
+            }
+        }
+
+        function loopRoles() {
+            typeWriter(roles[currentRole], 0, () => {
+                clearText(() => {
+                    currentRole = (currentRole + 1) % roles.length;
+                    loopRoles();
+                });
+            });
+        }
+
+        window.onload = function () {
+            loopRoles();
+        };
+    </script>
+
+    <!---------------CV Button--------------->
+
+    <!-----contact form script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyxujvhxAv_2C56ET47XzQtl_hJqkm52NxBFi0TyIFlDQCab0_LBxU3S_02I1GZ2enn/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+    
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+              msg.innerHTML = "Message sent successfully";
+              setTimeout(function() {
+                msg.innerHTML = "";
+              }, 5000);
+              form.reset();
+            })
+            .catch(error => {
+              console.error('Error!', error.message);
+            });
+        });
+    </script>
+    
+    
+
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        // Open Menu Function
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            openmenu();
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            closemenu();
+        });
+
+        function openmenu() {
+            sidemenu.classList.add('active');
+            document.querySelector('.fas.fa-bars').style.display = 'none';
+            document.querySelector('.fas.fa-times').style.display = 'block';
+
+            // Automatically close the menu after 3 seconds
+            setTimeout(function () {
+                closemenu();
+            }, 3000);
+        }
+
+        // Close Menu Function
+        function closemenu() {
+            sidemenu.classList.remove('active');
+            document.querySelector('.fas.fa-bars').style.display = 'block';
+            document.querySelector('.fas.fa-times').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

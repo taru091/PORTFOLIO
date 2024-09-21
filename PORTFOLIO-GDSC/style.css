@@ -1,0 +1,711 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh; /* Decreased height */
+    background : #000;/* Decreased size to 80% of the container */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
+.container{
+    padding: 20px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #dd4b79;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition:0.5s ;
+}
+
+nav ul li a:hover:after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+    
+}
+.header-text h1 span{
+    font-family: 'Lucida Fax';
+    color: red;
+
+    
+}
+.header-text h2 span{
+    font-family: 'Bradley Hand ITC';
+    color: rgb(47, 206, 255);
+}
+/*-------------about-----------*/
+
+#about{
+    width: 100%;
+    height: 100%; /* Decreased height */
+    background-size: 100%; /* Decreased size to 80% of the container */
+    background-position: center;
+    background-repeat: no-repeat; 
+    background : #000;
+    padding: 80px;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+
+}
+.sub-tittle{
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    color: #11aeec;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: red;
+    font-size: 20px;
+    font-style: bold;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*-------------services-----------*/
+#services{
+    width: 100%;
+    height: 100vh; /* Decreased height */
+    background : #000;
+    background-size: 100%; /* Decreased size to 80% of the container */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
+    padding: 30px 0;
+
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #dd4b79;
+    transform: translateY(-10px);
+}
+
+/*-------------portfolio-----------*/
+
+#portfolio{
+    width: 100%;
+    height: 100vh; /* Decreased height */
+    background-size: 100%; /* Decreased size to 80% of the container */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
+    padding: 30px 0;
+    background : #000;
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    grid-gap: 40px;
+    margin-top: 30px;
+}
+
+.work{
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    transition: transform 0.5s;
+    display: block;
+    border-radius: 10px;
+}
+.layer{
+    width: 100;
+    height: 0;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    font-size: 14px;
+    transition: height 0.5s;
+    text-align: center;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #133ae7;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto; /* Centers the button horizontally */
+    width: fit-content;
+    border: 1px solid rgb(69, 238, 103);
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: #ff004f;
+}
+/*---------------Contacts------------------*/
+#contact .container {
+    background : #000;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the two sections */
+    align-items: flex-start; /* Align items to the start */
+}
+
+/* Social icons container */
+.contact-left {
+    color: #c8c5c5;
+    flex-basis: 35%; /* Allocate 35% width to the social icons section */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: 20px; /* Add space between the heading and social icons */
+}
+
+/* Aligning the heading */
+.contact-left h1 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Aligning the social icons */
+.contact-left .social-icons {
+    display: flex;
+    flex-direction: row; /* Align social icons horizontally */
+    gap: 15px; /* Add space between icons */
+}
+
+/* Contact form container */
+.contact-right {
+    flex-basis: 60%; /* Allocate 60% width to the contact form section */
+}
+
+/* Form elements */
+.contact-right form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 10px; /* Add space between form elements */
+}
+
+.contact-right input,
+.contact-right textarea,
+.contact-right button {
+    width: 100%; /* Full width for form elements */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Border for form elements */
+    border-radius: 5px; /* Rounded corners */
+    background-color:  transparent; /* Transparent background */
+    color:#fff; /* Text color */
+}
+
+.contact-right button {
+    background-color: #22a45d; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+.contact-right button:hover {
+    background-color: #e65c5c; 
+}
+
+/*---------------ScrollBars------------------*/
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px 0;
+}
+
+.scroll-content {
+    display: inline-block;
+    animation: scroll-left 20s linear infinite;
+}
+
+.icon {
+    display: inline-block;
+    padding: 5px 5px;
+    margin-right: 5px;
+    color: rgb(18, 180, 239);
+    border-radius: 20px;
+    font-size: 20px; /* Icon size */
+}
+
+/* Animation for automatic scrolling */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/*---------------topbutton----------------*/
+
+.button-containerr {
+    margin-top: 20px;
+    display: flex; /* Align buttons in a row */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Space between buttons */
+}
+
+.btnn {
+    display: inline-block;
+    padding: 10px 20px; /* Padding for the button */
+    border: 3px solid rgb(45, 175, 231); /* Light green border */
+    border-radius: 15px; /* Rounded corners */
+    margin: 15px;
+    color: white; /* Light green text */
+    background-color: transparent; /* Transparent background */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.4s ease; /* Smooth transition for color changes */
+}
+
+.btnn:hover,
+.btnn:focus {
+    border-color: rgb(0, 174, 255); /* Border color on hover/focus */
+    color: rgb(255, 255, 255); /* Text color on hover/focus */
+    background-color: rgb(124, 97, 246) /* Background color on hover/focus */
+}
+
+/*-------------------footer-------------*/
+.footer {
+    width: 100vw; /* Use viewport width to ensure it covers the entire width */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    position: fixed; /* Fix it at the bottom of the viewport */
+    bottom: 0; /* Align it to the bottom of the viewport */
+    left: 0; /* Align it to the left of the viewport */
+    box-sizing: border-box;
+}
+
+.footer p {
+    margin: 10;
+}
+
+.footer a {
+    color: #f76c6c; /* Link color */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+#msg{
+    color: #5feb46;
+    margin-top: 10px;
+    margin-right: 70%;
+    display: block;
+}
+
+
+/*-------------------css small screen------------------------*/
+.fas.fa-times {
+    display: none; /* Hidden by default */
+}
+.fas.fa-bars{
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #header {
+        width: 100%;
+        height: 80vh; /* Ensure it takes up at least the viewport height */
+        background-image: url(images/bg-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 10px;
+        box-sizing: border-box; /* Include padding in the element’s total width and height */
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .header-text {
+        margin-top: 30%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .buttons a {
+        padding: 10px 20px;
+        font-size: 24px;
+    }
+
+    /* Show the hamburger icon only on smaller screens */
+    .fas.fa-bars {
+        margin-top: 20px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 15px; /* Positioned on the right */
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 5; /* Ensure it's on top of other elements */
+    }
+
+    /* Sidebar Menu */
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        transition: right 0.5s;
+        padding-top: 50px;
+        width: 200px;
+        height: 100vh;
+        right: -200px; /* Initially off the screen */
+        z-index: 4; /* Lower than the hamburger icon */
+    }
+
+    nav ul li {
+        margin: 25px;
+        display: block;
+    }
+
+    /* Cross Icon Styling (fa-times) */
+    nav ul .fas.fa-times {
+        display: block; /* Show close icon */
+        position: absolute;
+        top: 15px;
+        left: 25px; 
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 5; /* Ensure it's on top of other elements */
+    }
+
+    /* Show menu when the openmenu() is triggered */
+    #sidemenu.active {
+        right: 0; /* Show menu */
+    }
+/* -------------------------about-----------------------------------------*/
+
+#about{
+    width: 100%;
+        height: 100%; /* Ensure it takes up at least the viewport height */
+        background-image: url(images/aboutmb.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 10px;
+        box-sizing: border-box; 
+}
+
+    .sub-tittle {
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 70%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 10px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 15px;
+    }
+    
+    /*------------------------services----------------------------*/
+    #services {
+        width: 100%;
+        height: auto;
+        background-image: url(images/bg-services.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /*------------------------portfolio----------------------------*/
+    #portfolio {
+        width: 100%;
+        height: auto; /* Allow it to adapt to content */
+        background-image: url(images/bg-services.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .work-list {
+        display: inline; /* Switch to grid layout */
+        grid-gap: 20px; /* Smaller gap */
+        margin-top: 30px;
+    }
+
+    .work {
+        border-radius: 15px;
+        position: relative;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .work img {
+        width: 100%;
+        transition: transform 0.5s ease; /* Smoother transition */
+        display: block;
+        border-radius: 10px;
+    }
+
+    .layer {
+        width: 100%;
+        height: 0;
+        border-radius: 10px;
+        background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 20px; /* Reduce padding for smaller screens */
+        font-size: 12px;
+        transition: height 0.5s ease; /* Smooth height transition */
+        text-align: center;
+    }
+
+    .layer h3 {
+        font-weight: 500;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .layer a {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 50px;
+        margin-top: 20px;
+        color: #133ae7;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .work:hover img {
+        transform: scale(1.05); /* Slightly reduce scale effect */
+    }
+
+    .work:hover .layer {
+        height: 100%;
+    }
+
+    .btn {
+        display: block;
+        margin: 30px auto;
+        width: fit-content;
+        border: 1px solid rgb(69, 238, 103);
+        padding: 12px 40px;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background: #ff004f;
+    }
+    #contact .container {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
+        box-sizing: border-box;
+        background-image: url(images/contact-phn.jpg);
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+        justify-content: center; /* Center elements horizontally */
+    }
+    
+    #contact form {
+        width: 130%;
+        margin: 20px 0;
+    }
+    
+    #contact input, #contact textarea {
+        width: 130%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    
+    #contact button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #79d861; /* Adjust the background color as needed */
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    .contact button:hover {
+        background-color: #e65c5c; 
+    }
+}
